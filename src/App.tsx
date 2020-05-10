@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
-import './App.scss';
 import PageHeader from './components/PageHeader';
 import PageFooter from './components/PageFooter';
 import About from './views/About';
