@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './PageHeader.css';
+import './PageHeader.scss';
 
 function PageHeader() {
 	return (

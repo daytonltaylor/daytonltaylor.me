@@ -1,5 +1,5 @@
 import React from 'react';
-import './PageFooter.css';
+import './PageFooter.scss';
 
 function PageFooter() {
 	return <div></div>;
