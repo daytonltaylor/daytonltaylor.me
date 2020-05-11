@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './index.scss';
 
-function PageHeader() {
+interface PageHeaderProps {}
+
+const PageHeader: React.FC<PageHeaderProps> = () => {
 	return (
 		<div>
 			<nav className="navbar navbar-expand-md navbar-dark">
@@ -35,6 +37,6 @@ function PageHeader() {
 			</nav>
 		</div>
 	);
-}
+};
 
 export default PageHeader;

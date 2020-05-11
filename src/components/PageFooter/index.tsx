@@ -1,7 +1,9 @@
 import React from 'react';
 
-function PageFooter() {
+interface PageFooterProps {}
+
+const PageFooter: React.FC<PageFooterProps> = () => {
 	return <div></div>;
-}
+};
 
 export default PageFooter;

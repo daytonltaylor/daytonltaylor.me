@@ -3,11 +3,13 @@ import './index.scss';
 import DLTProfileImage from '../../images/dltprofile.jpg';
 import SocialButton from '../../components/SocialButton';
 
+interface AboutProps {}
+
 interface OpenDocumentOptions {
 	newTab: boolean;
 }
 
-function About() {
+const About: React.FC<AboutProps> = () => {
 	const requireNewTab = window.isMobileView || window.isTabletView;
 
 	const [showDocumentSection, setShowDocumentSection] = useState<boolean>(
@@ -116,6 +118,6 @@ function About() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default About;
