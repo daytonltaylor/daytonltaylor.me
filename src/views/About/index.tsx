@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './index.scss';
 import DLTProfileImage from '../../images/dltprofile.jpg';
+import SocialButton from '../../components/SocialButton';
 
 interface OpenDocumentOptions {
 	newTab: boolean;
@@ -56,42 +57,31 @@ function About() {
 					<div id="contacts" className="row">
 						<div className="col-lg-1"></div>
 						<div className="col">
-							<a
-								className="bttn-social"
+							<SocialButton
+								icon="envelope"
 								href="mailto:daytonltaylor@outlook.com"
-							>
-								<i className="fa fa-envelope"></i>
-							</a>
+							/>
 						</div>
 						<div className="col">
-							<a
-								className="bttn-social"
-								target="_blank"
-								rel="noreferrer noopener"
+							<SocialButton
 								href="https://github.com/daytonltaylor"
-							>
-								<i className="fa fa-github"></i>
-							</a>
+								icon="github"
+								target="_blank"
+							/>
 						</div>
 						<div className="col">
-							<a
-								className="bttn-social"
-								target="_blank"
-								rel="noreferrer noopener"
+							<SocialButton
 								href="https://twitter.com/DaytonLTaylor"
-							>
-								<i className="fa fa-twitter"></i>
-							</a>
+								icon="twitter"
+								target="_blank"
+							/>
 						</div>
 						<div className="col">
-							<a
-								className="bttn-social"
-								target="_blank"
-								rel="noreferrer noopener"
+							<SocialButton
 								href="https://www.linkedin.com/in/daytonltaylor/"
-							>
-								<i className="fa fa-linkedin-square"></i>
-							</a>
+								icon="linkedin"
+								target="_blank"
+							/>
 						</div>
 						<div className="col-lg-1"></div>
 					</div>
