@@ -6,11 +6,11 @@ body {
 	background-attachment: fixed;
 	background-color: black;
 	background-image: url('../images/dark-wall-texture.jpg');
-}
 
-body .spacer {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	.spacer {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 }
 
 .overlay {
@@ -31,16 +31,16 @@ body .spacer {
 	border: 1px solid white;
 	border-radius: 10px;
 	transition: all 0.15s;
-}
 
-.bttn:disabled {
-	pointer-events: none;
-	background-color: #000 !important;
-	color: #fff !important;
-}
+	&:hover {
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
 
-.bttn:hover {
-	background-color: black;
-	color: white;
-	cursor: pointer;
+	&:disabled {
+		pointer-events: none;
+		background-color: #000 !important;
+		color: #fff !important;
+	}
 }

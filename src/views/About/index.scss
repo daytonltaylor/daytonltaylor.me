@@ -17,30 +17,31 @@
 	text-align: center;
 	display: block;
 	margin: auto;
-}
 
-.profile-info h1 {
-	font-size: 45px;
-}
+	h1 {
+		font-size: 45px;
+	}
 
-.profile-info p {
-	font-size: 20px;
+	p {
+		font-size: 20px;
+	}
 }
 
 .document-links {
 	padding-top: 10px;
 	padding-bottom: 20px;
-}
+	display: none;
 
-.document-links .bttn {
-	border-color: white;
-	background-color: white;
-	color: black;
-}
+	.bttn {
+		border-color: white;
+		background-color: white;
+		color: black;
 
-.document-links .bttn:hover {
-	background-color: black;
-	color: white;
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
 }
 
 .documents-container {
