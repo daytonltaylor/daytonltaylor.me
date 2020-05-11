@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './index.scss';
+
+import { Link } from 'react-router-dom';
 
 interface PageHeaderProps {}
 
@@ -26,10 +27,14 @@ const PageHeader: React.FC<PageHeaderProps> = () => {
 					>
 						<ul className="navbar-nav ml-auto">
 							<li className="nav-item">
-								<Link to="/about">About</Link>
+								<Link className="bttn-nav" to="/about">
+									About
+								</Link>
 							</li>
 							<li className="nav-item">
-								<Link to="/projects">Projects</Link>
+								<Link className="bttn-nav" to="/projects">
+									Projects
+								</Link>
 							</li>
 						</ul>
 					</div>
