@@ -42,7 +42,7 @@ const About: React.FC<AboutProps> = () => {
 
 	useEffect(() => {
 		document.title = 'Dayton Taylor | About';
-	});
+	}, []);
 
 	return (
 		<div id="about-me" className="container">
