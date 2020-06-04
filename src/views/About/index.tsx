@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './index.scss';
 
-import DLTProfileImage from '../../images/dltprofile.jpg';
 import SocialButton from '../../components/SocialButton';
 
 interface AboutProps {}
@@ -50,7 +49,7 @@ const About: React.FC<AboutProps> = () => {
 				<div className="col-md-5">
 					<img
 						className="img-fluid rounded-circle profile-img"
-						src={DLTProfileImage}
+						src="/images/dltprofile.jpg"
 						alt="dlt-profile"
 					/>
 				</div>
