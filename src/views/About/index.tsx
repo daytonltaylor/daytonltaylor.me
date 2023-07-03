@@ -49,13 +49,13 @@ const About: React.FC<AboutProps> = () => {
 				<div className="col-md-5">
 					<img
 						className="img-fluid rounded-circle profile-img"
-						src="/images/dltprofile.jpg"
-						alt="dlt-profile"
+						src="/images/profile_dlt.jpg"
+						alt="profile-dlt"
 					/>
 				</div>
 				<div className="col-md-7 profile-info">
 					<h1>Dayton Taylor</h1>
-					<p>Full-Stack Web Developer</p>
+					<p>Software Engineer</p>
 					<div id="contacts" className="row">
 						<div className="col-lg-1"></div>
 						<div className="col">
