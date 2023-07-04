@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import PageFooter from '../components/PageFooter';
 import About from '../views/About';
@@ -31,11 +31,14 @@ const App: React.FC<AppProps> = () => {
 		<BrowserRouter>
 			<PageHeader />
 
-			<Switch>
-				<Route exact path="/about" component={About} />
-				<Route exact path="/" render={() => <Redirect to="/about" />} />
-				<Route component={NotFound} />
-			</Switch>
+			<Routes>
+				<Route path="/about" element={<About />} />
+				<Route
+					path="/"
+					element={<Navigate to="/about" replace={true} />}
+				/>
+				<Route path="*" element={<NotFound />} />
+			</Routes>
 
 			<PageFooter />
 		</BrowserRouter>
