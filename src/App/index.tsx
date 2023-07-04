@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import PageFooter from '../components/PageFooter';
 import About from '../views/About';
@@ -32,7 +32,11 @@ const App: React.FC<AppProps> = () => {
 			<PageHeader />
 
 			<Routes>
-				<Route path="/" element={<About />} />
+				<Route path="/about" element={<About />} />
+				<Route
+					path="/"
+					element={<Navigate to="/about" replace={true} />}
+				/>
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 
