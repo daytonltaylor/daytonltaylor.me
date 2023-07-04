@@ -1,44 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './index.scss';
 
 import SocialButton from '../../components/SocialButton';
 
 interface AboutProps {}
 
-interface OpenDocumentOptions {
-	newTab: boolean;
-}
-
 const About: React.FC<AboutProps> = () => {
-	const requireNewTab = window.isMobileView || window.isTabletView;
-
-	const [showDocumentSection, setShowDocumentSection] = useState<boolean>(
-		false
-	);
-	const [pageDocument, setPageDocument] = useState<{
-		url: string;
-		type: string;
-	}>({ url: '/documents/Resume.pdf', type: 'application/pdf' });
-
-	const openDocument = (
-		url: string,
-		type: string,
-		options: OpenDocumentOptions = { newTab: false }
-	): void => {
-		if ((options && options.newTab) || requireNewTab) {
-			setShowDocumentSection(false);
-			window.open(url);
-		} else {
-			setPageDocument({ url, type });
-			setShowDocumentSection(true);
-		}
-	};
-
-	const openPdf = (
-		url: string,
-		options: OpenDocumentOptions = { newTab: false }
-	): void => openDocument(url, 'application/pdf', options);
-
 	useEffect(() => {
 		document.title = 'Dayton Taylor | About';
 	}, []);
@@ -87,33 +54,6 @@ const About: React.FC<AboutProps> = () => {
 						</div>
 						<div className="col-lg-1"></div>
 					</div>
-				</div>
-			</div>
-			<div className="spacer"></div>
-			<div className="documents-container container">
-				<div className="document-links row">
-					<div className="col">
-						<button
-							name="toggleResume"
-							className="bttn"
-							disabled={
-								showDocumentSection &&
-								pageDocument.url === '/documents/Resume.pdf'
-							}
-							onClick={() => openPdf('/documents/Resume.pdf')}
-						>
-							Résumé
-						</button>
-					</div>
-				</div>
-				<div className="document-view">
-					<embed
-						className={showDocumentSection ? 'show' : 'hide'}
-						src={pageDocument.url}
-						type={pageDocument.type}
-						width="100%"
-						height="500px"
-					/>
 				</div>
 			</div>
 		</div>

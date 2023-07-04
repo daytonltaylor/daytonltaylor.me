@@ -27,40 +27,6 @@
 	}
 }
 
-.document-links {
-	padding-top: 10px;
-	padding-bottom: 20px;
-	display: none;
-
-	.bttn {
-		border-color: white;
-		background-color: white;
-		color: black;
-
-		&:hover {
-			background-color: black;
-			color: white;
-		}
-	}
-}
-
-.documents-container {
-	text-align: center;
-}
-
-.document-view {
-	.hide {
-		transition: max-height 0.1s ease-out;
-		max-height: 0;
-		overflow: hidden;
-	}
-
-	.show {
-		transition: max-height 0.1s ease-in;
-		max-height: 1000px;
-	}
-}
-
 @media screen and (max-width: 767px) {
 	.profile-img {
 		width: 70%;
@@ -68,9 +34,5 @@
 
 	.profile-info {
 		padding-top: 20px;
-	}
-
-	.document-view {
-		width: 100%;
 	}
 }
