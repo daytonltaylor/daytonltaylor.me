@@ -32,11 +32,7 @@ const App: React.FC<AppProps> = () => {
 			<PageHeader />
 
 			<Routes>
-				<Route path="/about" element={<About />} />
-				<Route
-					path="/"
-					element={<Navigate to="/about" replace={true} />}
-				/>
+				<Route path="/" element={<About />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 

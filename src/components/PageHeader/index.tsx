@@ -12,9 +12,7 @@ const PageHeader: React.FC<PageHeaderProps> = () => {
 				<div className="container">
 					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
-							<NavLink className="bttn-nav" to="/about">
-								About
-							</NavLink>
+							<NavLink className="bttn-nav" to="/"></NavLink>
 						</li>
 					</ul>
 				</div>
