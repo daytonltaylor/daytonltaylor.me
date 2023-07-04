@@ -1,6 +1,10 @@
 .nav-item {
 	padding: 5px 15px 5px 5px;
 
+	a {
+		text-decoration: none !important;
+	}
+
 	.active {
 		pointer-events: none !important;
 		color: rgb(175, 175, 175) !important;

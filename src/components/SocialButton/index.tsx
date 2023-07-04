@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import './index.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,6 +33,10 @@ const mapStringToIcon = (iconStr: string): IconProp => {
 const SocialButton: React.FC<SocialButtonProps> = (
 	props: SocialButtonProps
 ) => {
+	const icon: IconProp = useMemo(() => {
+		return mapStringToIcon(props.icon);
+	}, [props.icon]);
+
 	return (
 		<a
 			className="bttn-social"
@@ -40,7 +44,7 @@ const SocialButton: React.FC<SocialButtonProps> = (
 			target={props.target}
 			rel="noreferrer noopener"
 		>
-			<FontAwesomeIcon icon={mapStringToIcon(props.icon)} />
+			<FontAwesomeIcon icon={icon} />
 		</a>
 	);
 };

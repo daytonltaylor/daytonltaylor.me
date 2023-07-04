@@ -10,7 +10,7 @@ const PageHeader: React.FC<PageHeaderProps> = () => {
 		<div>
 			<nav className="navbar navbar-expand-md navbar-dark">
 				<div className="container">
-					<ul className="navbar-nav ml-auto">
+					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
 							<NavLink className="bttn-nav" to="/about">
 								About
