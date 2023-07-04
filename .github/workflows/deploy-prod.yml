@@ -36,5 +36,6 @@ jobs:
                   local: drop
                   remote: /web/daytonltaylor.me
                   host: ${{ secrets.SERVER_IP }}
+                  username: ${{ secrets.SSH_USER }}
                   privateKey: ${{ secrets.SSH_KEY }}
                   rmRemote: true
