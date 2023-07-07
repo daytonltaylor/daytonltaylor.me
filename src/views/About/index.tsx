@@ -28,28 +28,28 @@ const About: React.FC<AboutProps> = () => {
 						<div className="col">
 							<SocialButton
 								icon="Email"
-								href="mailto:daytonltaylor@outlook.com"
+								to="mailto:daytonltaylor@outlook.com"
 							/>
 						</div>
 						<div className="col">
 							<SocialButton
-								href="https://github.com/daytonltaylor"
 								icon="GitHub"
-								target="_blank"
+								to="https://github.com/daytonltaylor"
+								openInNewTab={true}
 							/>
 						</div>
 						<div className="col">
 							<SocialButton
-								href="https://twitter.com/DaytonLTaylor"
 								icon="Twitter"
-								target="_blank"
+								to="https://twitter.com/DaytonLTaylor"
+								openInNewTab={true}
 							/>
 						</div>
 						<div className="col">
 							<SocialButton
-								href="https://www.linkedin.com/in/daytonltaylor/"
 								icon="LinkedIn"
-								target="_blank"
+								to="https://www.linkedin.com/in/daytonltaylor/"
+								openInNewTab={true}
 							/>
 						</div>
 						<div className="col-lg-1"></div>

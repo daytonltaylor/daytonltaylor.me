@@ -9,12 +9,12 @@ import {
 	faTwitter,
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-import { Tooltip, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 
 interface SocialButtonProps {
-	href: string;
 	icon: 'Email' | 'GitHub' | 'Twitter' | 'LinkedIn';
-	target?: '_self' | '_blank';
+	to: string;
+	openInNewTab?: boolean;
 }
 
 const mapStringToIcon = (iconStr: string): IconProp => {
@@ -39,21 +39,22 @@ const SocialButton: React.FC<SocialButtonProps> = (
 	}, [props.icon]);
 
 	return (
-		<Tooltip title={<Typography>{props.icon}</Typography>}>
-			<a
+		<div>
+			<Button
 				className="bttn-social"
-				href={props.href}
-				target={props.target}
+				href={props.to}
+				target={props.openInNewTab ? '_blank' : '_self'}
 				rel="noreferrer noopener"
 			>
 				<FontAwesomeIcon icon={icon} />
-			</a>
-		</Tooltip>
+			</Button>
+			<div>{props.icon}</div>
+		</div>
 	);
 };
 
 SocialButton.defaultProps = {
-	target: '_self',
+	openInNewTab: false,
 };
 
 export default SocialButton;
