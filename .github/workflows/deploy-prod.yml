@@ -16,7 +16,7 @@ jobs:
             - name: Install dependencies
               run: npm install
             - name: Generate build
-              run: npm run build
+              run: npm run build:prod
             - name: Publish artifact
               uses: actions/upload-artifact@v1
               with:
