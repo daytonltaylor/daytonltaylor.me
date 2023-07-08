@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import './index.scss';
 
+import { Button } from '@mui/material';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +11,7 @@ import {
 	faTwitter,
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-import { Button } from '@mui/material';
+import RedirectIcon from '../../icons/RedirectIcon';
 
 interface SocialButtonProps {
 	icon: 'Email' | 'GitHub' | 'Twitter' | 'LinkedIn';
@@ -39,16 +41,19 @@ const SocialButton: React.FC<SocialButtonProps> = (
 	}, [props.icon]);
 
 	return (
-		<div>
+		<div className="social-bttn">
 			<Button
-				className="bttn-social"
+				className="social-bttn-icon"
 				href={props.to}
 				target={props.openInNewTab ? '_blank' : '_self'}
 				rel="noreferrer noopener"
 			>
 				<FontAwesomeIcon icon={icon} />
 			</Button>
-			<div>{props.icon}</div>
+			<span className="title">
+				<span className="title-text">{props.icon}</span>
+				<RedirectIcon />
+			</span>
 		</div>
 	);
 };
