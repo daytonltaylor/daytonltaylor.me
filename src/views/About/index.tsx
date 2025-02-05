@@ -40,13 +40,6 @@ const About: React.FC<AboutProps> = () => {
 						</div>
 						<div className="col">
 							<SocialButton
-								icon="Twitter"
-								to="https://twitter.com/DaytonLTaylor"
-								openInNewTab={true}
-							/>
-						</div>
-						<div className="col">
-							<SocialButton
 								icon="LinkedIn"
 								to="https://www.linkedin.com/in/daytonltaylor/"
 								openInNewTab={true}
