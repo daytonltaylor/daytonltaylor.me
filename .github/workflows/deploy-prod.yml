@@ -39,7 +39,7 @@ jobs:
                 host: ${{ secrets.SERVER_IP }}
                 username: ${{ secrets.SSH_USER }}
                 key: ${{ secrets.SSH_KEY }}
-                source: ${{ github.workspace }}/drop
+                source: ${{ github.workspace }}/drop/*
                 target: /web/daytonltaylor.me
                 rm: true
                 
