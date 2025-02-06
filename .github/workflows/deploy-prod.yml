@@ -42,5 +42,5 @@ jobs:
                 source: ${{ github.workspace }}/drop/*
                 target: /web/daytonltaylor.me
                 rm: true
-                strip_components: 2
+                strip_components: 3
                 
