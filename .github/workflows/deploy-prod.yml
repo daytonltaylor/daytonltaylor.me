@@ -34,10 +34,12 @@ jobs:
                   name: drop
             - name: Print workspace path
               run: echo "workspace = $GITHUB_WORKSPACE"
+            - name: Print workspace path 2
+              run: echo "workspace = ${{ github.workspace }}"
             - name: Copy via ssh
               uses: garygrossgarten/github-action-scp@v0.8.0
               with:
-                  local: $GITHUB_WORKSPACE/drop
+                  local: ${{ github.workspace }}/drop
                   remote: /web/daytonltaylor.me
                   host: ${{ secrets.SERVER_IP }}
                   username: ${{ secrets.SSH_USER }}
