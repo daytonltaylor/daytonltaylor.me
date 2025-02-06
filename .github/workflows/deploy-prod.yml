@@ -32,9 +32,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: drop
-                  path: ${{ github.workspace }}
-            - name: Print drop installation
-              run: ls ${{ github.workspace }}
+                  path: ${{ github.workspace }}/drop
             - name: Copy via ssh
               uses: garygrossgarten/github-action-scp@v0.8.0
               with:
