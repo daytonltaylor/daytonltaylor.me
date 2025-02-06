@@ -34,11 +34,12 @@ jobs:
                   name: drop
                   path: ${{ github.workspace }}/drop
             - name: Copy via ssh
-              uses: garygrossgarten/github-action-scp@v0.8.0
+              uses: appleboy/scp-action@v0.1.7
               with:
-                  local: ${{ github.workspace }}/drop
-                  remote: /web/daytonltaylor.me
-                  host: ${{ secrets.SERVER_IP }}
-                  username: ${{ secrets.SSH_USER }}
-                  privateKey: ${{ secrets.SSH_KEY }}
-                  rmRemote: true
+                host: ${{ secrets.SERVER_IP }}
+                username: ${{ secrets.USERNAME }}
+                key: ${{ secrets.SSH_KEY }}
+                source: ${{ github.workspace }}/drop
+                target: /web/daytonltaylor.me
+                rm: true
+                
