@@ -32,10 +32,9 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: drop
-            - name: Print workspace path
-              run: echo "workspace = $GITHUB_WORKSPACE"
-            - name: Print workspace path 2
-              run: echo "workspace = ${{ github.workspace }}"
+                  path: ${{ github.workspace }}
+            - name: Print drop installation
+              run: ls ${{ github.workspace }}
             - name: Copy via ssh
               uses: garygrossgarten/github-action-scp@v0.8.0
               with:
