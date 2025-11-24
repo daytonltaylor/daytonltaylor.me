@@ -1,55 +1,46 @@
 {
-	"name": "daytonltaylor.me",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@emotion/react": "^11.11.1",
-		"@emotion/styled": "^11.11.0",
-		"@fortawesome/fontawesome-svg-core": "^6.4.0",
-		"@fortawesome/free-brands-svg-icons": "^6.4.0",
-		"@fortawesome/free-solid-svg-icons": "^6.4.0",
-		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@mui/material": "^5.13.7",
-		"bootstrap": "^5.3.0",
-		"node-sass": "^9.0.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-router": "^6.14.1",
-		"react-router-dom": "^6.14.1",
-		"react-scripts": "5.0.1",
-		"typescript": "~4.9.5"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"test": "react-scripts test",
-		"build": "react-scripts build",
-		"build:prod": "GENERATE_SOURCEMAP=false react-scripts build"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-		"@testing-library/jest-dom": "^5.16.5",
-		"@testing-library/react": "^14.0.0",
-		"@testing-library/user-event": "^14.4.3",
-		"@types/jest": "^29.5.2",
-		"@types/node": "^20.4.0",
-		"@types/react": "^18.2.14",
-		"@types/react-dom": "^18.2.6",
-		"@types/react-router": "^5.1.20",
-		"@types/react-router-dom": "^5.3.3"
-	}
+  "name": "daytonltaylor.me",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "lint": "eslint .",
+    "test": "vitest",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@eslint/js": "^9.39.1",
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-brands-svg-icons": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
+    "@mui/material": "^7.3.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "bootstrap": "^5.3.8",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "jsdom": "^27.2.0",
+    "react-router-dom": "^7.9.6",
+    "sass": "^1.94.2",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.13"
+  }
 }

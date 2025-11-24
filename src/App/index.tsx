@@ -24,9 +24,7 @@ window.isTabletView = /android|ipad|playbook|silk/i.test(
 	? true
 	: false;
 
-interface AppProps {}
-
-const App: React.FC<AppProps> = () => {
+const App: React.FC = () => {
 	return (
 		<BrowserRouter>
 			<PageHeader />

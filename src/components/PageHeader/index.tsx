@@ -3,9 +3,7 @@ import './index.scss';
 
 import { NavLink } from 'react-router-dom';
 
-interface PageHeaderProps {}
-
-const PageHeader: React.FC<PageHeaderProps> = () => {
+const PageHeader: React.FC = () => {
 	return (
 		<div>
 			<nav className="navbar navbar-expand-md navbar-dark">

@@ -4,7 +4,7 @@ import './index.scss';
 import { Button } from '@mui/material';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
 import {
 	faGithub,
@@ -13,8 +13,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import RedirectIcon from '../../icons/RedirectIcon';
 
+export type SocialButtonIcon = 'Email' | 'GitHub' | 'Twitter' | 'LinkedIn';
+
 interface SocialButtonProps {
-	icon: 'Email' | 'GitHub' | 'Twitter' | 'LinkedIn';
+	icon: SocialButtonIcon;
 	to: string;
 	openInNewTab?: boolean;
 }
@@ -34,32 +36,28 @@ const mapStringToIcon = (iconStr: string): IconProp => {
 };
 
 const SocialButton: React.FC<SocialButtonProps> = (
-	props: SocialButtonProps
+	{ icon, to, openInNewTab = false }: SocialButtonProps
 ) => {
-	const icon: IconProp = useMemo(() => {
-		return mapStringToIcon(props.icon);
-	}, [props.icon]);
+	const iconProp: IconProp = useMemo(() => {
+		return mapStringToIcon(icon);
+	}, [icon]);
 
 	return (
 		<div className="social-bttn">
 			<Button
 				className="social-bttn-icon"
-				href={props.to}
-				target={props.openInNewTab ? '_blank' : '_self'}
+				href={to}
+				target={openInNewTab ? '_blank' : '_self'}
 				rel="noreferrer noopener"
 			>
-				<FontAwesomeIcon icon={icon} />
+				<FontAwesomeIcon icon={iconProp} />
 			</Button>
 			<span className="title">
-				<span className="title-text">{props.icon}</span>
+				<span className="title-text">{icon}</span>
 				<RedirectIcon />
 			</span>
 		</div>
 	);
-};
-
-SocialButton.defaultProps = {
-	openInNewTab: false,
 };
 
 export default SocialButton;

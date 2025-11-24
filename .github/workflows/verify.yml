@@ -1,0 +1,19 @@
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/setup-dependencies
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Check build
+        run: npm run build
