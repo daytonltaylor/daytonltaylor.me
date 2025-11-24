@@ -49,3 +49,4 @@ jobs:
           source: ${{ github.workspace }}/artifact_build/*
           target: ${{ vars.HOST_TARGET_DIR }}
           rm: true
+          strip_components: 6
