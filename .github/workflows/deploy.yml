@@ -25,7 +25,7 @@ jobs:
       - name: Publish artifact
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # version 5.0.0
         with:
-          name: artifact_build
+          name: build
           path: dist
           if-no-files-found: error
           overwrite: true
@@ -37,8 +37,8 @@ jobs:
       - name: Get build artifact
         uses: actions/download-artifact@v4
         with:
-          name: artifact_build
-          path: ${{ github.workspace }}/artifact_build
+          name: build
+          path: ${{ github.workspace }}/build
 
       - name: Copy via ssh
         uses: appleboy/scp-action@ff85246acaad7bdce478db94a363cd2bf7c90345 # version 1.0.0
@@ -46,7 +46,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: ${{ github.workspace }}/artifact_build/*
+          source: ${{ github.workspace }}/build/*
           target: ${{ vars.HOST_TARGET_DIR }}
           rm: true
           strip_components: 6
