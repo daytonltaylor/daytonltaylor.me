@@ -7,7 +7,11 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/actions/setup-dependencies
+      - name: Checkout repository
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # version 6.0.0
+
+      - name: Setup dependencies
+        uses: ./.github/actions/setup-dependencies
 
       - name: Run linter
         run: npm run lint
